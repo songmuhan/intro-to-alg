@@ -9,11 +9,13 @@
 
     - Given the input as followed , output an array which is the permutation of the original one and **non-descending**.
 
-      Input:A sequence of n numbers<img src="/Users/songmuhan/Downloads/CodeCogsEqn (1).png" alt="CodeCogsEqn (1)" style="zoom:75%;" />
+      Input:A sequence of n numbers<img src="/Users/songmuhan/python/intro-to-alg/Chapter2/InsertionSort/PNG/CodeCogsEqn (1).png" alt="CodeCogsEqn (1)" style="zoom:75%;" />
 
-      Output:A permutation  <img src="/Users/songmuhan/Downloads/CodeCogsEqn.png" alt="CodeCogsEqn" style="zoom:75%;" /> of the input sequence such that 
+      Output:A permutation<img src="/Users/songmuhan/python/intro-to-alg/Chapter2/InsertionSort/PNG/CodeCogsEqn.png" alt="CodeCogsEqn" style="zoom:75%;" />   of the input sequence such that 
 
-      <img src="/Users/songmuhan/Downloads/CodeCogsEqn (2).png" alt="CodeCogsEqn (2)" style="zoom:75%;" />
+      <img src="/Users/songmuhan/python/intro-to-alg/Chapter2/InsertionSort/PNG/CodeCogsEqn (2).png" alt="CodeCogsEqn (2)" style="zoom:75%;" />
+    
+      
 
   - **how does the insertion sort work?**
 
@@ -38,7 +40,7 @@
       - And simply repeat..
 
   - **Pseudocode**
-
+  
     ```c
     INSERTION-SORT(A)
      for j = 2 to A.length     //for j = 2; j<A.length+1;j++
@@ -47,17 +49,17 @@
      	while i>0 and A[i]>key   // if A[i] is bigger than key ,move behind.
      		A[i+1] = A[i]          
      		i = i - 1         
-     	A[i+1] = key	          // the end of while gives the index of the element which is  	                         // less than key.   
+   	A[i+1] = key	          // the end of while gives the index of the element which is  	                         // less than key.   
     ```
-
+  
     - The details you should pay attention to:
       - the overwrite of A[i+1] ?   NO!    **in fact , the A[i+1] = A[j] at the beginning of while ,is recorded in key** 
     - **Think about:**
-      - why the alg begin at the end of sorted array?
+    - why the alg begin at the end of sorted array?
       - what about the case that overwrite of A[i+1] where  $i \neq j -1$?  I mean in the middle of the sorted array, A[i] is bigger than key, I should move A[i] to A[i+1] , A[i+1] is overwritten !
 
   - **Can we do better?**
-
+  
     - review what the insertion sort alg do. Just two things !
       -  **First** : Find the appropriate poistion
       -  **Second** :Insert it
@@ -74,7 +76,7 @@
       - In the second : what we do is to move tones of element back, which is definitely slow.
         - Can we improve the second?
           - we can just change the "relation" between elements, which means ,we do not actually change the element in "memory ", but we change the relation , what i mean is something like this "A is the previous one of B ,and C is the successive one of B ".
-          - Yeah ! the List ! We change the pointer !
+        - Yeah ! the List ! We change the pointer !
       - Can we combine the two improvements? Unfortunately, we can not ! we can not do an binary search in the list.(Well, Actually , i don't know whether we can do that or not ... Common sense tell me that,lol)
 
   - **Implement**
@@ -82,7 +84,7 @@
     - I am learning python, so in this part i will try to implement the alg both in C and python. 
 
     - Acctually, I didn't promise my program can be correct in any input. I didn't have enough knowledge allowing me do such thing.But i will keep going on!
-
+  
     - ```c
       //INSERTION-SORT(A)
       int INSERTION_SORT(int *A,int n) // array A[n]
@@ -98,9 +100,9 @@
           A[i+1] = key;
         }
         return 0;
-      }  
+    }  
       ```
-
+  
     - ```python
       
       def INSERTIONSORT(A):
@@ -110,8 +112,8 @@
               while i>=0 and key < A[i]:
                   A[i+1] = A[i]
                   i = i - 1
-              A[i+1] = key
+            A[i+1] = key
       ```
-
+  
       
 
