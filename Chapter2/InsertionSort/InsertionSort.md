@@ -9,11 +9,11 @@
 
     - Given the input as followed , output an array which is the permutation of the original one and **non-descending**.
 
-      Input:A sequence of n numbers$$<a_1,a_2...a_n>$$
+      Input:A sequence of n numbers<img src="/Users/songmuhan/Downloads/CodeCogsEqn (1).png" alt="CodeCogsEqn (1)" style="zoom:75%;" />
 
-      Output:A permutation $$<a_1',a_2'...a_n'>$$ of the input sequence such that 
+      Output:A permutation  <img src="/Users/songmuhan/Downloads/CodeCogsEqn.png" alt="CodeCogsEqn" style="zoom:75%;" /> of the input sequence such that 
 
-      $a_1'\leq a_2'\leq...\leq a_n'$
+      <img src="/Users/songmuhan/Downloads/CodeCogsEqn (2).png" alt="CodeCogsEqn (2)" style="zoom:75%;" />
 
   - **how does the insertion sort work?**
 
@@ -23,7 +23,7 @@
 
       - for the first time , there is no element in the "sorted" arry , of course , the first element in the array , called A[1] , is **bigger** than "nothing", and A[1] is placed in the first poistion of the "sorted array"
 
-        - "bigger than nothing" : you can understand it like this in the array A[1..n], there is an "invisible"sentinel A[0] , whose value is so small (**-$\infty$ **) that no matter how small the value of A[1] is ,there always has : A[1] > A[0].
+        - "bigger than nothing" : you can understand it like this in the array A[1..n], there is an "invisible"sentinel A[0] , whose value is so small  that no matter how small the value of A[1] is ,there always has : A[1] > A[0].
 
       - After the fisrt procedure, we have the sorted array A[1]. in the second procedure , what we should do is to "insert A[2]",which means we should compare the value of A[1] and A[2] to **decide which poistion** A[2] should be placed.
 
