@@ -9,11 +9,11 @@
 
     - Given the input as followed , output an array which is the permutation of the original one and **non-descending**.
 
-      Input:A sequence of n numbers![image](PNG/CodeCogsEqn.png)
+      Input:A sequence of n numbers<img src="images/CodeCogsEqn (1).png" alt="image" style="zoom:75%;" />
 
-      Output:A permutation<img src="/Users/songmuhan/python/intro-to-alg/Chapter2/InsertionSort/PNG/CodeCogsEqn.png" alt="CodeCogsEqn" style="zoom:75%;" />   of the input sequence such that 
+      Output:A permutation <img src="images/CodeCogsEqn.png" style="zoom:75%;" />of the input sequence such that 
 
-      <img src="/Users/songmuhan/python/intro-to-alg/Chapter2/InsertionSort/PNG/CodeCogsEqn (2).png" alt="CodeCogsEqn (2)" style="zoom:75%;" />
+      <img src="images/CodeCogsEqn (2).png" alt="images" style="zoom:75%;" />
     
       
 
