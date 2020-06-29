@@ -103,7 +103,7 @@
     }  
       ```
   
-   - ```python
+    - ```python
       def INSERTIONSORT(A):
           for j in range(1,len(A)):
               key = A[j]
