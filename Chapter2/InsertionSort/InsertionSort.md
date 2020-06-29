@@ -71,7 +71,7 @@
           - if there don't exist an element equal to key, what should the position be?
       - **Actually , what we need is a position where key is larger than the previos and smaller than the latter.**
         - thus , we can define the return value of the binary search. 
-          - **binary search  return the index of element ,which is <=** key**
+          - **binary search  return the index of element ,which is <=key**
           - Fortunately , it can be done! lol
       - In the second : what we do is to move tones of element back, which is definitely slow.
         - Can we improve the second?
@@ -103,7 +103,7 @@
     }  
       ```
   
-    - ```python
+   - ```python
       def INSERTIONSORT(A):
           for j in range(1,len(A)):
               key = A[j]
