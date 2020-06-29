@@ -23,19 +23,19 @@
 
     - the process:
 
-      - for the first time , there is no element in the "sorted" arry , of course , the first element in the array , called A[1] , is **bigger** than "nothing", and A[1] is placed in the first poistion of the "sorted array"
+      - for the first time , there is no element in the "sorted" arry , of course , the first element in the array , called A[1] , is **bigger** than "nothing", and A[1] is placed in the first position of the "sorted array"
 
         - "bigger than nothing" : you can understand it like this in the array A[1..n], there is an "invisible"sentinel A[0] , whose value is so small  that no matter how small the value of A[1] is ,there always has : A[1] > A[0].
 
-      - After the fisrt procedure, we have the sorted array A[1]. in the second procedure , what we should do is to "insert A[2]",which means we should compare the value of A[1] and A[2] to **decide which poistion** A[2] should be placed.
+      - After the fisrt procedure, we have the sorted array A[1]. in the second procedure , what we should do is to "insert A[2]",which means we should compare the value of A[1] and A[2] to **decide which position** A[2] should be placed.
 
         - if A[2] is bigger than A[1], do nothing
 
-        - if A[1] is bigger than A[2], we should insert A[2] in the poistion of A[1].
+        - if A[1] is bigger than A[2], we should insert A[2] in the position of A[1].
 
           -  What about A[1]? Overwrite?
 
-            NO! we should record the value of A[2] ,using **key**  and move A[1] to the poistion of A[2].
+            NO! we should record the value of A[2] ,using **key**  and move A[1] to the position of A[2].
 
       - And simply repeat..
 
@@ -56,22 +56,22 @@
       - the overwrite of A[i+1] ?   NO!    **in fact , the A[i+1] = A[j] at the beginning of while ,is recorded in key** 
     - **Think about:**
     - why the alg begin at the end of sorted array?
-      - what about the case that overwrite of A[i+1] where  $i \neq j -1$?  I mean in the middle of the sorted array, A[i] is bigger than key, I should move A[i] to A[i+1] , A[i+1] is overwritten !
+      - what about the case that overwrite of A[i+1] where  i not equal to j -1?  I mean in the middle of the sorted array, A[i] is bigger than key, I should move A[i] to A[i+1] , A[i+1] is overwritten !
 
   - **Can we do better?**
   
     - review what the insertion sort alg do. Just two things !
-      -  **First** : Find the appropriate poistion
+      -  **First** : Find the appropriate position
       -  **Second** :Insert it
     - Improvement?
       - In the first : actually , what we do is to find a position in a sorted array. the good property of   sorted array make the improvement possible !
-        - we can use the **binary search** to find the position !  we improved the linear time to find a poistion to the **lgn** time.
+        - we can use the **binary search** to find the position !  we improved the linear time to find a position to the **lgn** time.
         - how binary search do?
-          - if there is someone in the sorted array equal to key, we can insert key both in the previous position of it  and in the latter poistion.
-          - if there don't exist an element equal to key, what should the poistion be?
+          - if there is someone in the sorted array equal to key, we can insert key both in the previous position of it  and in the latter position.
+          - if there don't exist an element equal to key, what should the position be?
       - **Actually , what we need is a position where key is larger than the previos and smaller than the latter.**
         - thus , we can define the return value of the binary search. 
-          - **binary search  return the index of element ,which is $\leq$ key**
+          - **binary search  return the index of element ,which is <=** key**
           - Fortunately , it can be done! lol
       - In the second : what we do is to move tones of element back, which is definitely slow.
         - Can we improve the second?
@@ -104,7 +104,6 @@
       ```
   
     - ```python
-      
       def INSERTIONSORT(A):
           for j in range(1,len(A)):
               key = A[j]
@@ -114,6 +113,6 @@
                   i = i - 1
             A[i+1] = key
       ```
-  
       
+  
 
