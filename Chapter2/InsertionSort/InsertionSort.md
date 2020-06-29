@@ -87,8 +87,8 @@
   
     - ```c
       //INSERTION-SORT(A)
-      int INSERTION_SORT(int *A,int n) // array A[n]
-      {
+      int INSERTION_SORT(int *A,int n){ // array A[n]
+      
         int i = 0,key = 0;
         for(int j = 1 ; j < n ; j++){
         	key = A[j];
@@ -100,7 +100,7 @@
           A[i+1] = key;
         }
         return 0;
-    }  
+      }  
       ```
   
     - ```python
